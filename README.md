@@ -30,7 +30,7 @@ Imagine you need to adjust the animation duration of a UI element dynamically wh
 ### Installation
 
 1. Install the repository with Unity Package Manager, or download/clone the repository.
-2. Use the static method `RuntimeGameObjectProvider.GetValues()` to access or set the test values in your non-MonoBehaviour scripts.
+2. Use the static method `RuntimeGameObjectProvider.GetValues()`, with an array of default values as a parameter, to access or set the test values in your non-MonoBehaviour scripts.
 
 ### Example Usage
 
@@ -44,7 +44,9 @@ public class MyClass
     public void AdjustAnimationDuration()
     {
         // Get the value at runtime without recompilation
-        _animationDuration = RuntimeGameObjectProvider.GetValue(new[] {0.5f, 10f});
+        var values RuntimeGameObjectProvider.GetValue(new[] {0.5f, 10f}); // default values to start with
+        _animationDuration = values[0]
+        _playerSpeed = values[1];
     }
 }
 ```
