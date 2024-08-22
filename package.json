@@ -1,0 +1,10 @@
+{
+  "name": "com.mm.editorruntimevaluespackage",
+  "version": "1.0.0",
+  "displayName": "Editor Runtime Values",
+  "description": "Easily test values in game object's fields from regular C# classes without the need for recompiling the project after each change.",
+  "unity": "2020.1.0",
+  "author": {
+    "name": "Maksym Mikhnevych"
+  }
+}
