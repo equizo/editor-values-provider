@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace editor_values_provider
 {
-  public class TestValuesProvider : MonoBehaviour
+  public class RuntimeGameObject : MonoBehaviour
   {
     #region Editor references
 
