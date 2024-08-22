@@ -12,6 +12,12 @@ namespace editor_values_provider
       CreateGameObject();
       _testValuesProvider.Action = action;
     }
+    
+    public static void ResetUpdate()
+    {
+      CreateGameObject();
+      _testValuesProvider.Action = () => { };
+    }
 
     private static void CreateGameObject()
     {
