@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace editor_values_provider.Runtime
+namespace editor_values_provider
 {
   public class TestValuesProvider : MonoBehaviour
   {
