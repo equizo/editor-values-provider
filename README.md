@@ -49,7 +49,7 @@ public class MyClass
 }
 ```
 
-![image](https://github.com/user-attachments/assets/44beea60-38a9-4a7b-a8a8-ae0112614792)
+![image](https://github.com/user-attachments/assets/050627e2-ef2b-4828-8328-23453c770a01)
 
 From here, you can edit the values in the editor and see how they impact code runtime without recompilation.
 
