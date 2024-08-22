@@ -44,7 +44,7 @@ public class MyClass
     public void AdjustAnimationDuration()
     {
         // Get the value at runtime without recompilation
-        var values RuntimeGameObjectProvider.GetValue(new[] {0.5f, 10f}); // default values to start with
+        var values = RuntimeGameObjectProvider.GetValue(new[] {0.5f, 10f}); // default values to start with
         _animationDuration = values[0]
         _playerSpeed = values[1];
     }
