@@ -7,24 +7,8 @@ namespace editor_values_provider
   {
     private static RuntimeGameObject _runtimeGameObject;
 
-    public static void SetUpdate(Action action)
-    {
-      CreateGameObject();
-      _runtimeGameObject.Action = action;
-    }
-    
-    public static void ResetUpdate()
-    {
-      CreateGameObject();
-      _runtimeGameObject.Action = () => { };
-    }
-
-    private static void CreateGameObject()
-    {
-      if (_runtimeGameObject == null) {
-        _runtimeGameObject = new GameObject(nameof(RuntimeGameObject)).AddComponent<RuntimeGameObject>();
-      }
-    }
+    public static MonoBehaviour MonoBehaviour =>
+      _runtimeGameObject;
 
     public static T[] GetValues<T>(T[] defaultValues)
     {
@@ -100,6 +84,25 @@ namespace editor_values_provider
 
         throw new NotSupportedException($"Type {typeof(U)} is not supported");
       }
+    }
+
+    private static void CreateGameObject()
+    {
+      if (_runtimeGameObject == null) {
+        _runtimeGameObject = new GameObject(nameof(RuntimeGameObject)).AddComponent<RuntimeGameObject>();
+      }
+    }
+
+    public static void SetUpdate(Action action)
+    {
+      CreateGameObject();
+      _runtimeGameObject.Action = action;
+    }
+
+    public static void ResetUpdate()
+    {
+      CreateGameObject();
+      _runtimeGameObject.Action = () => { };
     }
   }
 }
