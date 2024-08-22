@@ -99,10 +99,7 @@ namespace editor_values_provider
       _runtimeGameObject.Action = action;
     }
 
-    public static void ResetUpdate()
-    {
-      CreateGameObject();
-      _runtimeGameObject.Action = () => { };
-    }
+    public static void ResetUpdate() =>
+      SetUpdate(() => { });
   }
 }
