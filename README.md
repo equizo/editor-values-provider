@@ -40,6 +40,7 @@ Here's an example of how to use the `RuntimeGameObjectProvider` class:
 public class MyClass
 {
     private float _animationDuration;
+    private float _playerSpeed;
 
     public void AdjustAnimationDuration()
     {
