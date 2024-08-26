@@ -39,10 +39,14 @@ Here's an example of how to use the `RuntimeGameObjectProvider` class:
 ```csharp
 public class MyClass
 {
+    // Example of properties to set
     private float _animationDuration;
     private float _playerSpeed;
 
-    public void AdjustAnimationDuration()
+    public void Update() =>
+        EditValuesFromEditor();
+
+    private void EditValuesFromEditor()
     {
         // Get the value at runtime without recompilation
         var values = RuntimeGameObjectProvider.GetValue(new[] {0.5f, 10f}); // default values to start with
